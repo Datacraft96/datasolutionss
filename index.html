@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DataSolutions | Simplifying Your Data</title>
+  <title>DataSolutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="DataSolutions helps businesses and individuals manage unorganised data through data entry, Excel automation, handwritten to digital conversion and Power BI reporting.">
+  <meta name="description" content="DataSolutions helps businesses and professionals manage data entry, Excel automation, handwritten to digital conversion, and Power BI reports.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -19,19 +19,19 @@
 
     body {
       color: #222;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     /* NAVBAR */
     header {
       background: #ffffff;
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
-    .nav-container {
+    .nav {
       max-width: 1100px;
       margin: auto;
       padding: 14px 20px;
@@ -40,57 +40,53 @@
       align-items: center;
     }
 
-    .brand {
+    .logo {
       font-size: 22px;
-      font-weight: 700;
-      color: #0f766e;
-      letter-spacing: 0.5px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
     }
 
-    nav a {
-      margin-left: 20px;
+    .nav a {
+      margin-left: 18px;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0f766e;
+      font-weight: 600;
+      color: #222;
     }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #0f766e, #115e59);
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
       color: #fff;
       padding: 100px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      font-weight: 300;
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
     }
 
     .hero p {
       max-width: 750px;
       margin: auto;
+      margin-bottom: 12px;
       font-size: 18px;
-      opacity: 0.95;
     }
 
-    .hero-btn {
+    .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 34px;
+      margin-top: 20px;
+      padding: 14px 32px;
       background: #ffffff;
       color: #0f766e;
       text-decoration: none;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* SECTIONS */
@@ -104,12 +100,14 @@
     }
 
     h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 32px;
+      margin-bottom: 18px;
     }
 
-    .light {
-      background: #f8f9f9;
+    .highlight {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     ul, ol {
@@ -117,20 +115,11 @@
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    /* CONTACT BOX */
-    .contact-box {
-      background: #0f766e;
-      color: #fff;
-      padding: 40px;
-      border-radius: 8px;
-    }
-
-    .contact-box a {
-      color: #ffffff;
-      font-weight: 600;
+    .light {
+      background: #f7f7f7;
     }
 
     /* FOOTER */
@@ -138,8 +127,12 @@
       background: #111;
       color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 22px;
       font-size: 14px;
+    }
+
+    a {
+      color: #0f766e;
     }
   </style>
 </head>
@@ -147,37 +140,38 @@
 <body>
 
 <header>
-  <div class="nav-container">
-    <div class="brand">Data<span style="font-weight:300">Solutions</span></div>
-    <nav>
+  <div class="nav">
+    <div class="logo">DataSolutions</div>
+    <div>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </div>
 </header>
 
 <section class="hero" id="home">
-  <h1>Data<span>Solutions</span></h1>
-  <p>
-    Don’t stress over unorganised data, messy Excel files, or handwritten records.
-    You focus on your work — we take care of your data with accuracy and clarity.
-  </p>
-  <a href="#contact" class="hero-btn">Talk to Us</a>
+  <h1>DataSolutions</h1>
+  <p>We take care of your data so you can focus on your work.</p>
+  <p>Data Entry • Excel Automation • Handwritten to Digital • Power BI Reports</p>
+  <a href="#contact" class="btn">Talk to Us</a>
 </section>
 
 <section id="about">
   <div class="container">
-    <h2>About DataSolutions</h2>
-    <p>
-      At DataSolutions, we help individuals, professionals, and businesses who deal with
-      scattered, unstructured, or time-consuming data tasks.
+    <h2>About Us</h2>
+    <p class="highlight">
+      Don’t stress about unorganised data.
     </p>
     <p>
-      Whether it’s large Excel files, handwritten documents, PDFs, or reports that need
-      cleaning and structure — we handle it carefully, accurately, and confidentially.
-      Our goal is simple: make your data usable, readable, and decision-ready.
+      Many businesses and professionals waste valuable time dealing with messy Excel files,
+      handwritten records, and unstructured information.
+      <strong>You focus on your core work — we handle the data for you.</strong>
+    </p>
+    <p>
+      At DataSolutions, our goal is simple: convert raw, scattered data into clean,
+      structured, and usable information that supports better decisions.
     </p>
   </div>
 </section>
@@ -186,11 +180,11 @@
   <div class="container">
     <h2>What We Do</h2>
     <ul>
-      <li>Data Entry and Data Cleaning</li>
-      <li>Handwritten / PDF / Image to Excel Conversion</li>
-      <li>Excel Automation and Dashboards</li>
-      <li>Power BI Reports and Visualisations</li>
-      <li>Data Formatting, Structuring, and Organisation</li>
+      <li>Accurate data entry and data cleaning</li>
+      <li>Handwritten documents, images, and PDFs converted to Excel</li>
+      <li>Excel automation and easy-to-use dashboards</li>
+      <li>Power BI reports for clear insights</li>
+      <li>Proper formatting and structuring of business data</li>
     </ul>
   </div>
 </section>
@@ -199,10 +193,10 @@
   <div class="container">
     <h2>How We Work</h2>
     <ol>
-      <li>You share your requirement or sample data</li>
+      <li>You share your data or requirement</li>
       <li>We review and suggest the best solution</li>
-      <li>Work is completed with accuracy checks</li>
-      <li>Final delivery with revisions if required</li>
+      <li>Work is done with accuracy checks</li>
+      <li>Final delivery with revisions if needed</li>
     </ol>
   </div>
 </section>
@@ -210,11 +204,9 @@
 <section class="light" id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <div class="contact-box">
-      <p>Email: <a href="mailto:datacraftsolutionss@gmail.com">datacraftsolutionss@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/918605744143" target="_blank">+91 8605744143</a></p>
-      <p>Location: India (Remote services available)</p>
-    </div>
+    <p>Email: <a href="mailto:datacraftsolutionss@gmail.com">datacraftsolutionss@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/918605744143" target="_blank">+91 8605744143</a></p>
+    <p>Location: India (Remote work available)</p>
   </div>
 </section>
 
