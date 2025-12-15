@@ -1,243 +1,874 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DATA SOLUTIONS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCraft Solutions - Professional Excel & Data Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <meta name="description" content="DataSolutions helps businesses and professionals manage data entry, Excel automation, handwritten to digital conversion, and Power BI reports.">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+        /* Navigation */
+        nav {
+            background: #1e3a5f;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 100;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
 
-    body {
-      color: #222;
-      line-height: 1.6;
-    }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
 
-    /* NAVBAR */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+        .logo-badge {
+            background: linear-gradient(135deg, #1e3a5f, #2d5f4f);
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .logo-badge-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
 
-    .nav img {
-      height: 45px;
-    }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
 
-    .nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      color: #222;
-    }
+        .logo-main {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #0f766e, #14b8a6);
-      color: #fff;
-      padding: 90px 20px 110px;
-      text-align: center;
-    }
+        .logo-sub {
+            color: #94a3b8;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    .hero-logo {
-      margin-bottom: 20px;
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
 
-    .hero-logo img {
-      height: 90px; /* PERFECT SIZE */
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
 
-    .hero h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 52px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 16px;
-    }
+        .nav-links a:hover {
+            color: #4ade80;
+        }
 
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      margin-bottom: 14px;
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5f4f 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .services-line {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            max-width: 900px;
+            line-height: 1.2;
+        }
 
-    .btn {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 14px 36px;
-      background: #ffffff;
-      color: #0f766e;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 700;
-    }
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            line-height: 1.6;
+        }
 
-    /* SECTIONS */
-    section {
-      padding: 70px 20px;
-    }
+        .cta-button {
+            display: inline-block;
+            background: #4ade80;
+            color: #1e3a5f;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(74, 222, 128, 0.5);
+            background: #22c55e;
+        }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 18px;
-    }
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: #f8fafc;
+        }
 
-    .highlight {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-    ul, ol {
-      margin-left: 20px;
-    }
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-    li {
-      margin-bottom: 8px;
-    }
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+        }
 
-    .light {
-      background: #f7f7f7;
-    }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
 
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 22px;
-      font-size: 14px;
-    }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
 
-    a {
-      color: #0f766e;
-    }
-  </style>
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-color: #4ade80;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: #1e3a5f;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #2d5f4f;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .feature p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #2d5f4f, #1e3a5f);
+            color: white;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .step h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .step p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial {
+            background: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border-left: 5px solid #2d5f4f;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            color: #1e3a5f;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-role {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5f4f 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: #1e3a5f;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2d5f4f;
+            box-shadow: 0 0 0 3px rgba(45, 95, 79, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .submit-btn {
+            background: #2d5f4f;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #1e3a5f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30, 58, 95, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #4ade80;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4ade80;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+                flex-wrap: nowrap;
+            }
+
+            .logo-container {
+                gap: 0.6rem;
+                flex-shrink: 0;
+            }
+
+            .logo-main {
+                font-size: 1.2rem;
+                white-space: nowrap;
+            }
+
+            .logo-sub {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+
+            .logo-badge {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+            }
+
+            .logo-badge-text {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem;
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .services {
+                padding: 4rem 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-main {
+                font-size: 1.1rem;
+            }
+
+            .logo-sub {
+                font-size: 0.6rem;
+                letter-spacing: 1px;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Navigation with Logo -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <div class="logo-badge">
+                    <span class="logo-badge-text">DC</span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">DataCraft</span>
+                    <span class="logo-sub">SOLUTIONS</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<header>
-  <div class="nav">
-    <img src="logo.png" alt="DataSolutions Logo">
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transform Data Chaos into Clarity</h1>
+        <p>Professional Excel organization, handwritten document conversion, and Power BI reporting services</p>
+        <a href="#contact" class="cta-button">Get Started Today</a>
+    </section>
 
-<section class="hero" id="home">
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive data solutions tailored to your business needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>Excel Organization</h3>
+                    <p>Transform messy, unorganized Excel files into clean, structured, and easy-to-navigate spreadsheets. We optimize formulas, remove duplicates, and create professional layouts.</p>
+                </div>
 
-  <!-- LOGO ABOVE NAME -->
-  <div class="hero-logo">
-    <img src="logo.png" alt="DataSolutions Logo">
-  </div>
+                <div class="service-card">
+                    <span class="service-icon">✍️</span>
+                    <h3>Handwritten to Digital</h3>
+                    <p>Convert handwritten documents, forms, and notes into professional Word or Excel files. Fast, accurate, and formatted to your specifications.</p>
+                </div>
 
-  <h1>DATA SOLUTIONS</h1>
+                <div class="service-card">
+                    <span class="service-icon">📈</span>
+                    <h3>Power BI Reports</h3>
+                    <p>Create stunning, interactive Power BI dashboards that turn your data into actionable insights. Custom visualizations designed for your business.</p>
+                </div>
 
-  <p>WE TAKE CARE OF YOUR DATA SO YOU CAN FOCUS ON YOUR WORK.</p>
+                <div class="service-card">
+                    <span class="service-icon">🔄</span>
+                    <h3>Data Migration</h3>
+                    <p>Seamlessly transfer data between systems, platforms, or formats. We ensure accuracy and maintain data integrity throughout the process.</p>
+                </div>
 
-  <p class="services-line">
-    DATA ENTRY • EXCEL AUTOMATION • HANDWRITTEN TO DIGITAL • POWER BI REPORTS
-  </p>
+                <div class="service-card">
+                    <span class="service-icon">🧹</span>
+                    <h3>Data Cleaning</h3>
+                    <p>Remove errors, inconsistencies, and duplicates from your datasets. We standardize formats and validate data for improved quality.</p>
+                </div>
 
-  <a href="#contact" class="btn">TALK TO US</a>
-</section>
+                <div class="service-card">
+                    <span class="service-icon">⚙️</span>
+                    <h3>Custom Solutions</h3>
+                    <p>Need something specific? We create custom Excel templates, automated workflows, and tailored data solutions for your unique requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p class="highlight">
-      Don’t stress about unorganised data.
-    </p>
-    <p>
-      Many businesses and professionals waste valuable time dealing with messy Excel files,
-      handwritten records, and unstructured information.
-      <strong>You focus on your core work — we handle the data for you.</strong>
-    </p>
-    <p>
-      At DataSolutions, our goal is simple: convert raw, scattered data into clean,
-      structured, and usable information that supports better decisions.
-    </p>
-  </div>
-</section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose DataCraft Solutions?</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Fast Turnaround</h3>
+                    <p>Quick delivery without compromising quality</p>
+                </div>
 
-<section class="light" id="services">
-  <div class="container">
-    <h2>What We Do</h2>
-    <ul>
-      <li>Accurate data entry and data cleaning</li>
-      <li>Handwritten documents, images, and PDFs converted to Excel</li>
-      <li>Excel automation and easy-to-use dashboards</li>
-      <li>Power BI reports for clear insights</li>
-      <li>Proper formatting and structuring of business data</li>
-    </ul>
-  </div>
-</section>
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Accurate Work</h3>
+                    <p>Meticulous attention to detail and data integrity</p>
+                </div>
 
-<section>
-  <div class="container">
-    <h2>How We Work</h2>
-    <ol>
-      <li>You share your data or requirement</li>
-      <li>We review and suggest the best solution</li>
-      <li>Work is done with accuracy checks</li>
-      <li>Final delivery with revisions if needed</li>
-    </ol>
-  </div>
-</section>
+                <div class="feature">
+                    <span class="feature-icon">💼</span>
+                    <h3>Professional Service</h3>
+                    <h3>Experienced team with industry expertise</p>
+                </div>
 
-<section class="light" id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:datacraftsolutionss@gmail.com">datacraftsolutionss@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/918605744143" target="_blank">+91 8605744143</a></p>
-    <p>Location: India (Remote work available)</p>
-  </div>
-</section>
+                <div class="feature">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Secure & Confidential</h3>
+                    <p>Your data is protected with strict confidentiality</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © 2025 DATA SOLUTIONS. All rights reserved.
-</footer>
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple, transparent process from start to finish</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Share Your Data</h3>
+                    <p>Send us your messy files, handwritten documents, or describe your data needs</p>
+                </div>
 
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Analyze</h3>
+                    <p>Our team reviews your requirements and provides a clear quote and timeline</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We Transform</h3>
+                    <p>Expert professionals organize, clean, and refine your data to perfection</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>You Receive</h3>
+                    <p>Get your professionally organized files ready to use immediately</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"DataCraft Solutions transformed our chaotic spreadsheets into a streamlined system. Our team productivity increased by 40%!"</p>
+                    <p class="testimonial-author">Sarah Johnson</p>
+                    <p class="testimonial-role">Operations Manager, Tech Corp</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">"The handwritten document conversion service is incredible. Fast, accurate, and saved us countless hours of manual data entry."</p>
+                    <p class="testimonial-author">Michael Chen</p>
+                    <p class="testimonial-role">Director, Healthcare Solutions</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">"Their Power BI dashboards gave us insights we never knew existed in our data. Highly professional and responsive team!"</p>
+                    <p class="testimonial-author">Emily Rodriguez</p>
+                    <p class="testimonial-role">CFO, Retail Innovations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Data?</h2>
+            <p>Let's discuss how we can help organize your data and improve your workflow</p>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Smith">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <input type="text" id="service" placeholder="Excel Organization, Data Conversion, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" required placeholder="Tell us about your project and requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DataCraft Solutions</h3>
+                <p>Professional Excel and data services for businesses of all sizes. Transform your data chaos into clarity.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Excel Organization</a></li>
+                    <li><a href="#services">Handwritten Conversion</a></li>
+                    <li><a href="#services">Power BI Reports</a></li>
+                    <li><a href="#services">Data Cleaning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@datacraftsolutions.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Hours: Mon-Fri, 9AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 DataCraft Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
