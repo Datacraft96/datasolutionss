@@ -304,13 +304,83 @@
         .testimonials {
             padding: 6rem 2rem;
             background: white;
+            overflow: hidden;
         }
 
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
             margin-top: 4rem;
+            animation: none;
+        }
+
+        /* Running Reviews Slider */
+        .reviews-slider {
+            margin-top: 3rem;
+            overflow: hidden;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 16px;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 2rem;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+
+        .review-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            width: 350px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #2d5f4f;
+        }
+
+        .review-card .rating {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .review-card .review-text {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .review-card .review-author {
+            color: #1e3a5f;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .review-card .review-location {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .reviews-slider:hover .reviews-track {
+            animation-play-state: paused;
+        }
+
+        .rating {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
         }
 
         .testimonial {
@@ -743,9 +813,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Enterprise-Grade Data Solutions</h1>
-        <p>Professional Excel optimization, document digitization, and Power BI analytics for businesses worldwide</p>
-        <a href="#contact" class="cta-button">Request Consultation</a>
+        <h1>Struggling with Messy Data? We Make It Simple.</h1>
+        <p>Professional Excel optimization, document digitization, and Power BI analytics for businesses and individuals</p>
+        <a href="#contact" class="cta-button">Get Started Today</a>
     </section>
 
     <!-- Services Section -->
@@ -868,21 +938,164 @@
             
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">"DataCraft transformed 5 years of scattered Excel files into a unified system. Our reporting time dropped from 3 days to 2 hours. Exceptional service and attention to detail."</p>
-                    <p class="testimonial-author">James Mitchell</p>
-                    <p class="testimonial-role">Operations Director, TechFlow Solutions, UK</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I was drowning in 3 years of unorganized Excel files. DataCraft cleaned everything in 2 days. My work pressure reduced so much! Now I can actually find what I need."</p>
+                    <p class="testimonial-author">Rajesh M.</p>
+                    <p class="testimonial-role">Accountant, Mumbai</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial-text">"We needed 300+ handwritten patient records digitized urgently. DataCraft delivered flawlessly in 48 hours with 99.9% accuracy. Their professionalism is unmatched."</p>
-                    <p class="testimonial-author">Dr. Priya Deshmukh</p>
-                    <p class="testimonial-role">Medical Director, HealthCare Plus, Pune</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Had 500+ handwritten customer records from my shop. They converted everything to Excel perfectly. Saved me months of work. Very affordable and fast service!"</p>
+                    <p class="testimonial-author">Sneha K.</p>
+                    <p class="testimonial-role">Retail Shop Owner, Pune</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial-text">"The Power BI dashboards exceeded our expectations. Board members were impressed with the insights. DataCraft turned our raw data into strategic assets."</p>
-                    <p class="testimonial-author">David Chen</p>
-                    <p class="testimonial-role">CFO, InnovateTech Inc., Singapore</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The Power BI dashboard they made for my business is incredible. I can see everything at a glance now. My team loves it. Best investment I made this year!"</p>
+                    <p class="testimonial-author">Vikram S.</p>
+                    <p class="testimonial-role">Business Owner, Bangalore</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Great service! They organized all my project files and created proper templates. Communication was quick on WhatsApp. Only 4 stars because took one extra day."</p>
+                    <p class="testimonial-author">Meera P.</p>
+                    <p class="testimonial-role">Freelance Consultant, Delhi</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"My old Excel files were a mess with duplicate entries and errors. They cleaned everything, removed duplicates, and made it so easy to use. Highly recommend!"</p>
+                    <p class="testimonial-author">Anil T.</p>
+                    <p class="testimonial-role">Sales Manager, Hyderabad</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Needed urgent help converting handwritten notes to Word. They delivered in 24 hours! Quality was perfect. Will definitely use again for my next project."</p>
+                    <p class="testimonial-author">Pooja R.</p>
+                    <p class="testimonial-role">Student, Chennai</p>
+                </div>
+            </div>
+
+            <!-- Running Reviews Slider -->
+            <div class="reviews-slider">
+                <div class="reviews-track">
+                    <!-- First set of reviews -->
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Excellent work on our inventory management Excel. Everything is now automated and error-free."</p>
+                        <p class="review-author">Amit Joshi</p>
+                        <p class="review-location">📍 Jaipur, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Professional service from start to finish. My data migration was seamless and stress-free."</p>
+                        <p class="review-author">Sarah L.</p>
+                        <p class="review-location">📍 London, UK</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"Fast turnaround! Converted all my handwritten receipts to digital format. Very satisfied."</p>
+                        <p class="review-author">Neha Gupta</p>
+                        <p class="review-location">📍 Ahmedabad, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Outstanding Power BI work! The dashboards are exactly what we needed for our reports."</p>
+                        <p class="review-author">Michael T.</p>
+                        <p class="review-location">📍 Dubai, UAE</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"They organized 5 years of financial records perfectly. Made my CA's job so much easier!"</p>
+                        <p class="review-author">Karan Shah</p>
+                        <p class="review-location">📍 Surat, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Great communication and quality work. Helped me organize my research data efficiently."</p>
+                        <p class="review-author">Lisa Chen</p>
+                        <p class="review-location">📍 Singapore</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"Very reasonable pricing and quick delivery. Will use again for my next project."</p>
+                        <p class="review-author">Rohan Kumar</p>
+                        <p class="review-location">📍 Kolkata, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Impressed with their attention to detail. Every formula and format was perfect!"</p>
+                        <p class="review-author">Emma R.</p>
+                        <p class="review-location">📍 Melbourne, Australia</p>
+                    </div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Excellent work on our inventory management Excel. Everything is now automated and error-free."</p>
+                        <p class="review-author">Amit Joshi</p>
+                        <p class="review-location">📍 Jaipur, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Professional service from start to finish. My data migration was seamless and stress-free."</p>
+                        <p class="review-author">Sarah L.</p>
+                        <p class="review-location">📍 London, UK</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"Fast turnaround! Converted all my handwritten receipts to digital format. Very satisfied."</p>
+                        <p class="review-author">Neha Gupta</p>
+                        <p class="review-location">📍 Ahmedabad, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Outstanding Power BI work! The dashboards are exactly what we needed for our reports."</p>
+                        <p class="review-author">Michael T.</p>
+                        <p class="review-location">📍 Dubai, UAE</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"They organized 5 years of financial records perfectly. Made my CA's job so much easier!"</p>
+                        <p class="review-author">Karan Shah</p>
+                        <p class="review-location">📍 Surat, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Great communication and quality work. Helped me organize my research data efficiently."</p>
+                        <p class="review-author">Lisa Chen</p>
+                        <p class="review-location">📍 Singapore</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <p class="review-text">"Very reasonable pricing and quick delivery. Will use again for my next project."</p>
+                        <p class="review-author">Rohan Kumar</p>
+                        <p class="review-location">📍 Kolkata, India</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Impressed with their attention to detail. Every formula and format was perfect!"</p>
+                        <p class="review-author">Emma R.</p>
+                        <p class="review-location">📍 Melbourne, Australia</p>
+                    </div>
                 </div>
             </div>
         </div>
