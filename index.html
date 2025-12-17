@@ -376,6 +376,48 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
+        .contact-method-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .method-btn {
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .method-btn .icon {
+            font-size: 1.3rem;
+        }
+
+        .whatsapp-method:hover {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .email-method:hover {
+            background: #2d5f4f;
+            color: white;
+            border-color: #2d5f4f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 95, 79, 0.3);
+        }
+
         .form-group {
             margin-bottom: 1.8rem;
             text-align: left;
@@ -492,28 +534,29 @@
             }
 
             .logo-container {
-                gap: 0.6rem;
+                gap: 0.5rem;
                 flex-shrink: 0;
+                max-width: 70%;
             }
 
             .logo-main {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 white-space: nowrap;
             }
 
             .logo-sub {
-                font-size: 0.65rem;
-                letter-spacing: 1.5px;
+                font-size: 0.6rem;
+                letter-spacing: 1px;
             }
 
             .logo-badge {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 flex-shrink: 0;
             }
 
             .logo-badge-text {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
             .nav-links {
@@ -521,18 +564,20 @@
             }
 
             .hero {
-                padding: 5rem 1.5rem;
-                min-height: 500px;
+                padding: 4rem 1rem;
+                min-height: 450px;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 line-height: 1.3;
+                padding: 0 0.5rem;
             }
 
             .hero p {
-                font-size: 1rem;
-                padding: 0 1rem;
+                font-size: 0.95rem;
+                padding: 0 0.5rem;
+                line-height: 1.5;
             }
 
             .cta-button {
@@ -541,57 +586,129 @@
             }
 
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                padding: 0 1rem;
             }
 
             .section-subtitle {
-                font-size: 1rem;
+                font-size: 0.95rem;
                 padding: 0 1rem;
             }
 
             .services {
-                padding: 4rem 1.5rem;
+                padding: 3rem 1rem;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             .service-card {
-                padding: 2rem;
+                padding: 1.5rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-card p {
+                font-size: 0.95rem;
+            }
+
+            .features {
+                padding: 3rem 1rem;
+            }
+
+            .how-it-works {
+                padding: 3rem 1rem;
+            }
+
+            .testimonials {
+                padding: 3rem 1rem;
             }
 
             .testimonial-grid {
                 grid-template-columns: 1fr;
             }
 
+            .testimonial {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 3rem 1rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
             .contact-form {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
+                margin: 0 0.5rem;
+            }
+
+            .contact-method-buttons {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .method-btn {
+                padding: 1rem;
+                font-size: 0.95rem;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .footer-section ul li {
+                font-size: 0.9rem;
+                word-break: break-word;
             }
         }
 
         @media (max-width: 480px) {
             .logo-main {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
             }
 
             .logo-sub {
-                font-size: 0.6rem;
-                letter-spacing: 1px;
+                font-size: 0.55rem;
+            }
+
+            .logo-badge {
+                width: 32px;
+                height: 32px;
+            }
+
+            .logo-badge-text {
+                font-size: 0.85rem;
             }
 
             .hero h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
 
             .hero p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
             }
         }
 
@@ -626,9 +743,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Transform Data Chaos into Clarity</h1>
-        <p>Professional Excel organization, handwritten document conversion, and Power BI reporting services</p>
-        <a href="#contact" class="cta-button">Get Started Today</a>
+        <h1>Enterprise-Grade Data Solutions</h1>
+        <p>Professional Excel optimization, document digitization, and Power BI analytics for businesses worldwide</p>
+        <a href="#contact" class="cta-button">Request Consultation</a>
     </section>
 
     <!-- Services Section -->
@@ -751,21 +868,21 @@
             
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">"DataCraft Solutions transformed our chaotic spreadsheets into a streamlined system. Our team productivity increased by 40%!"</p>
-                    <p class="testimonial-author">Sarah Johnson</p>
-                    <p class="testimonial-role">Operations Manager, Tech Corp</p>
+                    <p class="testimonial-text">"DataCraft transformed 5 years of scattered Excel files into a unified system. Our reporting time dropped from 3 days to 2 hours. Exceptional service and attention to detail."</p>
+                    <p class="testimonial-author">James Mitchell</p>
+                    <p class="testimonial-role">Operations Director, TechFlow Solutions, UK</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial-text">"The handwritten document conversion service is incredible. Fast, accurate, and saved us countless hours of manual data entry."</p>
-                    <p class="testimonial-author">Michael Chen</p>
-                    <p class="testimonial-role">Director, Healthcare Solutions</p>
+                    <p class="testimonial-text">"We needed 300+ handwritten patient records digitized urgently. DataCraft delivered flawlessly in 48 hours with 99.9% accuracy. Their professionalism is unmatched."</p>
+                    <p class="testimonial-author">Dr. Priya Deshmukh</p>
+                    <p class="testimonial-role">Medical Director, HealthCare Plus, Pune</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial-text">"Their Power BI dashboards gave us insights we never knew existed in our data. Highly professional and responsive team!"</p>
-                    <p class="testimonial-author">Emily Rodriguez</p>
-                    <p class="testimonial-role">CFO, Retail Innovations</p>
+                    <p class="testimonial-text">"The Power BI dashboards exceeded our expectations. Board members were impressed with the insights. DataCraft turned our raw data into strategic assets."</p>
+                    <p class="testimonial-author">David Chen</p>
+                    <p class="testimonial-role">CFO, InnovateTech Inc., Singapore</p>
                 </div>
             </div>
         </div>
@@ -774,32 +891,42 @@
     <!-- CTA Section -->
     <section id="contact" class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your Data?</h2>
-            <p>Let's discuss how we can help organize your data and improve your workflow</p>
+            <h2>Ready to Optimize Your Data?</h2>
+            <p>Connect with our team to discuss your data transformation needs</p>
             
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" required placeholder="John Smith">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="john@company.com">
+                        <label for="email">Business Email *</label>
+                        <input type="email" id="email" required placeholder="your.email@company.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <input type="text" id="service" placeholder="Excel Organization, Data Conversion, etc.">
+                        <label for="service">Service Required</label>
+                        <input type="text" id="service" placeholder="e.g., Excel Organization, Data Migration, Power BI">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" required placeholder="Tell us about your project and requirements..."></textarea>
+                        <label for="message">Project Requirements *</label>
+                        <textarea id="message" required placeholder="Please describe your project requirements, timeline, and any specific needs..."></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <div class="form-group">
+                        <label>How would you like to send this inquiry? *</label>
+                        <div class="contact-method-buttons">
+                            <button type="button" class="method-btn whatsapp-method" onclick="submitViaWhatsApp()">
+                                <span class="icon">💬</span> Send via WhatsApp
+                            </button>
+                            <button type="button" class="method-btn email-method" onclick="submitViaEmail()">
+                                <span class="icon">📧</span> Send via Email
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -810,7 +937,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>DataCraft Solutions</h3>
-                <p>Professional Excel and data services for businesses of all sizes. Transform your data chaos into clarity.</p>
+                <p>Professional data management and Excel services for businesses worldwide. Transforming complex data into actionable insights since 2020.</p>
             </div>
 
             <div class="footer-section">
@@ -863,40 +990,79 @@
             });
         });
 
-        // Form submission - Send to WhatsApp
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
+        // Submit via WhatsApp
+        function submitViaWhatsApp() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
-            
-            // Create WhatsApp message with line breaks
-            const whatsappText = 
-`*New Client Inquiry from Website*
 
-*Name:* ${name}
+            // Validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields (Name, Email, and Project Requirements)');
+                return;
+            }
+
+            // Create WhatsApp message
+            const whatsappText = 
+`*New Business Inquiry - DataCraft Solutions*
+
+*Client Name:* ${name}
 *Email:* ${email}
-*Service Needed:* ${service}
-*Message:* ${message}`;
-            
-            // Encode the message for URL
+*Service Required:* ${service || 'Not specified'}
+*Project Requirements:* ${message}
+
+_Sent via Website Contact Form_`;
+
             const encodedMessage = encodeURIComponent(whatsappText);
-            
-            // Create WhatsApp URL
             const whatsappURL = `https://wa.me/918605744143?text=${encodedMessage}`;
-            
-            // Open WhatsApp in new tab
+
+            // Open WhatsApp
             window.open(whatsappURL, '_blank');
             
-            // Show success message
-            alert('Redirecting to WhatsApp! Please click Send to complete your inquiry.');
+            alert('Opening WhatsApp! Please click Send to complete your inquiry.');
+            document.getElementById('contactForm').reset();
+        }
+
+        // Submit via Email
+        function submitViaEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields (Name, Email, and Project Requirements)');
+                return;
+            }
+
+            // Create email
+            const subject = encodeURIComponent('New Business Inquiry - DataCraft Solutions');
+            const body = encodeURIComponent(
+`Hello DataCraft Solutions Team,
+
+I would like to inquire about your services.
+
+Name: ${name}
+Email: ${email}
+Service Required: ${service || 'Not specified'}
+
+Project Requirements:
+${message}
+
+Looking forward to hearing from you.
+
+Best regards,
+${name}`
+            );
+
+            // Open email client
+            window.location.href = `mailto:datacraftsolutionss@gmail.com?subject=${subject}&body=${body}`;
             
-            // Reset form
-            this.reset();
-        });
+            alert('Opening your email client! Please click Send to complete your inquiry.');
+            document.getElementById('contactForm').reset();
+        }
     </script>
 </body>
 </html>
